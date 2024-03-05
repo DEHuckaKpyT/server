@@ -45,24 +45,24 @@ exports.readLicense = function*() {
 		count: 1,
 		type: c_LR.Success,
 		light: false,
-		packageType: constants.PACKAGE_TYPE_OS,
+		packageType: constants.PACKAGE_TYPE_I,
 		mode: constants.LICENSE_MODE.None,
-		branding: false,
+		branding: true,
 		connections: constants.LICENSE_CONNECTIONS,
 		connectionsView: constants.LICENSE_CONNECTIONS,
-		customization: false,
-		advancedApi: false,
-		usersCount: 0,
-		usersViewCount: 0,
+		customization: true,
+		advancedApi: true,
+		usersCount: constants.LICENSE_CONNECTIONS,
+		usersViewCount: constants.LICENSE_CONNECTIONS,
 		usersExpire: constants.LICENSE_EXPIRE_USERS_ONE_DAY,
-		hasLicense: false,
-		plugins: false,
+		hasLicense: true,
+		plugins: true,
 		buildDate: oBuildDate,
 		startDate: startDate,
-		endDate: null,
+		endDate: new Date("2099-01-01T23:59:59.000Z"),
 		customerId: "",
-		alias: ""
+		alias: "community"
 	}, null];
 };
 
-exports.packageType = constants.PACKAGE_TYPE_OS;
+exports.packageType = constants.PACKAGE_TYPE_I;
